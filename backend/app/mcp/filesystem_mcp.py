@@ -27,7 +27,20 @@ ALLOWED_BASE = settings.UPLOAD_DIR.resolve()
 
 
 def _safe_path(relative_path: str) -> Path:
-    """Resolve and validate that the path is within the uploads directory."""
+    """
+    Resolve and validate that the path is within the uploads directory.
+    
+    Security: Prevents directory traversal attacks by ensuring the resolved path
+    is within the allowed base directory (uploads folder).
+    
+    Design: Uses resolve() to eliminate symlinks and relative path tricks,
+    then checks if the resolved path starts with the allowed base.
+    
+    Behavior: Returns validated Path if safe, raises ValueError if path tries
+    to escape the uploads directory (e.g., "../../etc/passwd").
+    
+    Implementation: Joins with base, resolves absolute path, checks prefix
+    """
     resolved = (ALLOWED_BASE / relative_path).resolve()
     if not str(resolved).startswith(str(ALLOWED_BASE)):
         raise ValueError(f"Access denied: path '{relative_path}' is outside uploads directory")
