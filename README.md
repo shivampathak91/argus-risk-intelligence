@@ -65,6 +65,12 @@ ARGUS is a production-grade AI platform that analyzes infrastructure incidents a
 
 ---
 
+![Image 1](Disaster%20Images/1.png)
+![Image 2](Disaster%20Images/2.png)
+![Image 3](Disaster%20Images/3.png)
+![Image 4](Disaster%20Images/4.png)
+![Image 5](Disaster%20Images/5.png)
+
 ## 🏗️ Architecture
 
 ### Technology Stack
