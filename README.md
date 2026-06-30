@@ -344,7 +344,9 @@ Contributions are welcome! Please follow these guidelines:
 
 This project was created as part of the Google Kaggle Agentic AI & Vibe Coding course.
 
-It was built using an AI-first development workflow, where AI coding agents generated and iteratively refined the code based on prompts and feedback. The focus of the project is the system design, agent orchestration, feature integration, and overall user experience.v
+It was built using an AI-first development workflow, where AI coding agents generated and iteratively refined the code based on prompts and feedback. The focus of the project is the system design, agent orchestration, feature integration, and overall user experience.
+
+---
 
 ### Development Guidelines
 
