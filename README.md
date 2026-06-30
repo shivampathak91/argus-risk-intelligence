@@ -15,7 +15,7 @@
 
 ---
 
-## 🎯 Overview {#overview}
+## 🎯 Overview
 
 ### The Problem
 
@@ -53,7 +53,7 @@ ARGUS (Autonomous Risk Intelligence & Early Warning Platform) is a production-gr
 
 ---
 
-## ✨ Features {#features}
+## ✨ Features
 
 ### Multi-Agent Pipeline
 
@@ -80,12 +80,21 @@ ARGUS (Autonomous Risk Intelligence & Early Warning Platform) is a production-gr
 ---
 
 ![Login Page](Disaster%20Images/1.png)
-![Dashboard](Disaster%20Images/2.png)
-![Adding Incidents](Disaster%20Images/3.png)
-![Agent Pipeline](Disaster%20Images/4.png)
-![Risk Assessment](Disaster%20Images/5.png)
+*Figure: Login Page*
 
-## 🏗️ Architecture {#architecture}
+![Dashboard](Disaster%20Images/2.png)
+*Figure: Dashboard*
+
+![Adding Incidents](Disaster%20Images/3.png)
+*Figure: Adding Incidents*
+
+![Agent Pipeline](Disaster%20Images/4.png)
+*Figure: Agent Pipeline*
+
+![Risk Assessment](Disaster%20Images/5.png)
+*Figure: Risk Assessment*
+
+## 🏗️ Architecture
 
 ### Technology Stack
 
@@ -306,7 +315,7 @@ Each MCP server validates paths, sanitizes inputs, and provides secure tool acce
 
 ---
 
-##  Setup {#setup}
+## Setup
 
 ### Prerequisites
 
@@ -384,7 +393,7 @@ Each MCP server validates paths, sanitizes inputs, and provides secure tool acce
 
 ---
 
-## 🎮 Demo Mode {#demo-mode}
+## 🎮 Demo Mode
 
 ARGUS includes 4 pre-configured demo scenarios that demonstrate the full AI pipeline without requiring file uploads:
 
@@ -430,7 +439,7 @@ To use Demo Mode:
 
 ---
 
-## 🤝 Contributing {#contributing}
+## 🤝 Contributing
 
 Contributions are welcome! Please follow these guidelines:
 
@@ -439,14 +448,6 @@ Contributions are welcome! Please follow these guidelines:
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## Development
-
-This project was created as part of the Google Kaggle Agentic AI & Vibe Coding course.
-
-It was built using an AI-first development workflow, where AI coding agents generated and iteratively refined the code based on prompts and feedback. The focus of the project is the system design, agent orchestration, feature integration, and overall user experience.
-
----
 
 ### Development Guidelines
 
