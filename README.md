@@ -9,13 +9,13 @@
 
 **AI-Powered Multi-Agent System for Infrastructure Risk Assessment & Disaster Response**
 
-[Features](#features) • [Architecture](#architecture) • [Setup](#setup) • [Demo](#demo) • [Contributing](#contributing)
+[Features](#features) • [Architecture](#architecture) • [Setup](#setup) • [Demo Mode](#demo-mode) • [Contributing](#contributing)
 
 </div>
 
 ---
 
-## 🎯 Overview
+## 🎯 Overview {#overview}
 
 ### The Problem
 
@@ -53,7 +53,7 @@ ARGUS (Autonomous Risk Intelligence & Early Warning Platform) is a production-gr
 
 ---
 
-## ✨ Features
+## ✨ Features {#features}
 
 ### Multi-Agent Pipeline
 
@@ -85,7 +85,7 @@ ARGUS (Autonomous Risk Intelligence & Early Warning Platform) is a production-gr
 ![Agent Pipeline](Disaster%20Images/4.png)
 ![Risk Assessment](Disaster%20Images/5.png)
 
-## 🏗️ Architecture
+## 🏗️ Architecture {#architecture}
 
 ### Technology Stack
 
@@ -306,7 +306,7 @@ Each MCP server validates paths, sanitizes inputs, and provides secure tool acce
 
 ---
 
-##  Setup
+##  Setup {#setup}
 
 ### Prerequisites
 
@@ -384,7 +384,7 @@ Each MCP server validates paths, sanitizes inputs, and provides secure tool acce
 
 ---
 
-## 🎮 Demo Mode
+## 🎮 Demo Mode {#demo-mode}
 
 ARGUS includes 4 pre-configured demo scenarios that demonstrate the full AI pipeline without requiring file uploads:
 
@@ -430,7 +430,7 @@ To use Demo Mode:
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contributing {#contributing}
 
 Contributions are welcome! Please follow these guidelines:
 
