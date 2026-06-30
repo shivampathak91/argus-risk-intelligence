@@ -17,7 +17,21 @@
 
 ## 🎯 Overview
 
-ARGUS is a production-grade AI platform that analyzes infrastructure incidents and natural disasters using a sophisticated multi-agent architecture. It combines computer vision, document analysis, historical pattern matching, and AI-driven simulation to provide actionable risk intelligence for emergency responders and infrastructure managers.
+### The Problem
+
+Infrastructure risk assessment and disaster response face critical challenges:
+
+- **Slow Manual Analysis**: Emergency responders and infrastructure managers must manually inspect damage, review documents, and assess risks - a process that can take hours or days when every minute counts
+- **Lack of Historical Context**: Decisions are made without learning from past incidents, leading to repeated mistakes and missed opportunities
+- **Fragmented Data Sources**: Information is scattered across images, PDFs, databases, and web sources with no unified analysis
+- **Subjective Risk Assessment**: Risk levels are often estimated based on intuition rather than evidence-based analysis
+- **No What-If Modeling**: Decision-makers cannot predict outcomes of different intervention strategies before acting
+
+These challenges result in delayed responses, inefficient resource allocation, and preventable loss of life and infrastructure.
+
+### The Solution
+
+ARGUS (Autonomous Risk Intelligence & Early Warning Platform) is a production-grade AI platform that automates infrastructure risk assessment through a sophisticated multi-agent architecture. It combines computer vision, document analysis, historical pattern matching, and AI-driven simulation to provide actionable risk intelligence in minutes instead of hours.
 
 ### What It Does
 
@@ -65,11 +79,11 @@ ARGUS is a production-grade AI platform that analyzes infrastructure incidents a
 
 ---
 
-![Image 1](Disaster%20Images/1.png)
-![Image 2](Disaster%20Images/2.png)
-![Image 3](Disaster%20Images/3.png)
-![Image 4](Disaster%20Images/4.png)
-![Image 5](Disaster%20Images/5.png)
+![Login Page](Disaster%20Images/1.png)
+![Dashboard](Disaster%20Images/2.png)
+![Adding Incidents](Disaster%20Images/3.png)
+![Agent Pipeline](Disaster%20Images/4.png)
+![Risk Assessment](Disaster%20Images/5.png)
 
 ## 🏗️ Architecture
 
@@ -91,6 +105,92 @@ ARGUS is a production-grade AI platform that analyzes infrastructure incidents a
 - **React Flow** - Interactive workflow visualization
 - **Leaflet** - Interactive maps for incident location
 - **Recharts** - Data visualization
+
+---
+
+## 🚀 Project Journey
+
+### Development Process
+
+ARGUS was developed over 10 days as a capstone project demonstrating advanced AI agent systems and secure local data access protocols. The project evolved through several iterations:
+
+**Phase 1: Foundation (Days 1-2)**
+- Set up FastAPI backend with SQLAlchemy ORM
+- Implemented JWT authentication and role-based access control
+- Created database models for incidents, workflows, and reports
+- Built React frontend with TanStack Router
+
+**Phase 2: Multi-Agent System (Days 3-4)**
+- Implemented Vision Agent using Google Gemini Vision API
+- Built OCR Agent for document text extraction
+- Created Knowledge Agent with historical pattern matching
+- Developed Risk Agent for quantitative risk scoring
+- Implemented orchestrator for parallel and sequential agent execution
+
+**Phase 3: Advanced Features (Days 5-6)**
+- Added Simulation Agent for what-if scenario modeling
+- Built Recommendation Agent with evidence-based actions
+- Implemented Debate Agent for conflict resolution
+- Created Commander Agent for final decision synthesis
+- Added Report Agent for professional documentation
+
+**Phase 4: MCP Integration (Days 7-8)**
+- Implemented Filesystem MCP for secure file access
+- Built PDF MCP for document text extraction
+- Created Search MCP for web search capabilities
+- Developed SQLite MCP for database queries
+- Added input validation and path sanitization
+
+**Phase 5: Polish & Testing (Days 9-10)**
+- Implemented WebSocket real-time progress updates
+- Added automatic model fallback on quota limits
+- Created demo scenarios for instant demonstration
+- Added audit logging for security compliance
+- Fixed bugs and optimized performance
+
+### Key Challenges & Solutions
+
+**Challenge 1: Agent Coordination**
+- **Problem**: Agents needed to run in parallel (vision, OCR, knowledge) but sequentially (risk, simulation, recommendation)
+- **Solution**: Implemented orchestrator with two-phase execution pattern using asyncio.gather for parallel tasks
+
+**Challenge 2: Knowledge Base Gaps**
+- **Problem**: Knowledge agent had no landslide historical data, causing it to return wildfire information
+- **Solution**: Added comprehensive historical records for all incident types (landslides, wildfires, floods, etc.) to knowledge base
+
+**Challenge 3: Variable Scoping in Orchestrator**
+- **Problem**: When agents failed, subsequent agents couldn't access data due to Python scoping issues
+- **Solution**: Initialized all data dictionaries before parallel execution to prevent UnboundLocalError
+
+**Challenge 4: API Quota Limits**
+- **Problem**: AI models hit rate limits, causing pipeline failures
+- **Solution**: Implemented automatic fallback to backup models with graceful degradation
+
+**Challenge 5: MCP Security**
+- **Problem**: File access could lead to directory traversal attacks
+- **Solution**: Added path validation, input sanitization, and restricted access to upload directory only
+
+### Lessons Learned
+
+1. **Multi-Agent Systems Require Careful Orchestration**: Parallel execution improves performance but requires careful error handling and state management
+
+2. **Historical Context is Critical**: AI agents need domain-specific historical data to provide accurate assessments
+
+3. **Security Must Be Built In**: MCP servers require input validation at every entry point to prevent attacks
+
+4. **Real-Time Feedback Improves UX**: WebSocket updates make long-running AI processes feel responsive
+
+5. **Fallback Strategies Essential**: AI APIs have limits; systems must gracefully handle failures
+
+6. **Evidence-Based AI Builds Trust**: Every recommendation should cite specific evidence from analysis
+
+### Future Enhancements
+
+- Add more incident types (earthquakes, hurricanes, chemical spills)
+- Implement agent fine-tuning on domain-specific data
+- Add mobile app for field responders
+- Integrate with real-time sensor data streams
+- Add collaborative features for multi-user incidents
 
 ---
 
